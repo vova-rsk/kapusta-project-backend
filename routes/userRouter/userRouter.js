@@ -11,7 +11,5 @@ router.use(middlewars.auth)
 
 router.post('/logout', wrapper(controllers.logoutUser))
 router.get('/current', wrapper(controllers.currentUser))
-// router.patch('/', wrapper(subscriptionValidation), wrapper(ctrl.updateUserSubscription))
-// router.patch('/avatars', upload.single('avatar'), wrapper(avatarValidation), wrapper(ctrl.updateUserAvatar))
 
 module.exports = router
