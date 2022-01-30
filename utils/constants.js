@@ -7,7 +7,8 @@ const ERROR_MESSAGES = {
   dbConnectionError: 'Cannot create connection to DB',
   invalidLoginData: 'Email or password is wrong',
   notFound: 'Not found',
-  serverError: 'Server error'
+  serverError: 'Server error',
+  notAuthorized: 'Not authorized'
 }
 
 module.exports = {
