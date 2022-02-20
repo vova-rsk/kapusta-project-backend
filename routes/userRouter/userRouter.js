@@ -2,9 +2,9 @@ const express = require('express')
 const router = express.Router()
 const controllers = require('../../controllers')
 const middlewars = require('../../middlewares')
-const { wrapper } = require('../../utils')
+const { wrapper, validationSchemas } = require('../../utils')
 
-router.post('/signup', wrapper(controllers.signupUser))
+router.post('/signup', wrapper(middlewars.validation(validationSchemas.userDataSchema)), wrapper(controllers.signupUser))
 router.post('/login', wrapper(controllers.loginUser))
 
 router.use(wrapper(middlewars.auth))

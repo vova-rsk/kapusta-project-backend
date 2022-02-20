@@ -8,7 +8,10 @@ const ERROR_MESSAGES = {
   invalidLoginData: 'Email or password is wrong',
   notFound: 'Not found',
   serverError: 'Server error',
-  notAuthorized: 'Not authorized'
+  notAuthorized: 'Not authorized',
+  invalidEmailFormat: 'invalid email format',
+  missingField: 'missing required field',
+  invalidPasswordFormat: 'invalid password format'
 }
 
 module.exports = {

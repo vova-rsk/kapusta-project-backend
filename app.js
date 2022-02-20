@@ -20,7 +20,12 @@ app.use((req, res) => {
 })
 
 app.use((err, req, res, next) => {
-  const { status = 500, message = ERROR_MESSAGES.serverError } = err
+  let { status = 500, message = ERROR_MESSAGES.serverError } = err
+
+  if (err.code === 11000) {
+    message = 'Email in use'
+    status = 409
+  }
 
   res.status(status).json({
     status: 'error',
