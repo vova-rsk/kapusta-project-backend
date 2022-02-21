@@ -15,10 +15,14 @@ const ERROR_MESSAGES = {
   badRequest: 'Bad request',
   entryFeeMultipleSettingError: 'Entry fee can be setted only once',
   insufficientFunds: 'Insufficient funds',
-  invalidValue: 'Invalid value'
+  invalidValue: 'Invalid value',
+  invalidNameValue: 'Invalid value of Name',
+  invalidTypeValue: 'Invalid value of Type',
+  missingTypeField: 'Missing required Type field',
+  missingNameField: 'Missing required Name field'
 }
 
-const BALANCE_DATA_TYPES = {
+const CATEGORY_TYPES = {
   income: 'income',
   cost: 'cost'
 }
@@ -26,5 +30,5 @@ const BALANCE_DATA_TYPES = {
 module.exports = {
   ERROR_MESSAGES,
   SUCCESS_MESSAGES,
-  BALANCE_DATA_TYPES
+  CATEGORY_TYPES
 }
