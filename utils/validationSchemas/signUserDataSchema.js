@@ -1,7 +1,7 @@
 const Joi = require('joi')
 const { ERROR_MESSAGES } = require('../constants')
 
-const userSchema = Joi.object({
+const userDataSchema = Joi.object({
   email: Joi.string()
     .required()
     .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } })
@@ -27,4 +27,4 @@ const userSchema = Joi.object({
     .optional()
 })
 
-module.exports = userSchema
+module.exports = userDataSchema
