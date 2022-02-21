@@ -13,7 +13,8 @@ const ERROR_MESSAGES = {
   missingField: 'Missing required field',
   invalidPasswordFormat: 'Invalid password format',
   badRequest: 'Bad request',
-  entryFeeMultipleSettingError: 'Entry fee can be setted only once'
+  entryFeeMultipleSettingError: 'Entry fee can be setted only once',
+  insufficientFunds: 'insufficient funds'
 }
 
 const BALANCE_DATA_TYPES = {

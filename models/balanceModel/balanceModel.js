@@ -14,7 +14,7 @@ const balanceSchema = new Schema({
     default: 0
   },
   owner: {
-    type: String,
+    type: Schema.Types.ObjectId,
     required: [true, 'Owner is required']
   }
 }, { versionKey: false, timestamps: true })
