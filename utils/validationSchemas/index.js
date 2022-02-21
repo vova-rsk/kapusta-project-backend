@@ -1,3 +1,4 @@
-const userDataSchema = require('./signDataSchema')
+const userDataSchema = require('./signUserDataSchema')
+const entryFeeDataSchema = require('./addEntryFeeDataSchema')
 
-module.exports = { userDataSchema }
+module.exports = { userDataSchema, entryFeeDataSchema }

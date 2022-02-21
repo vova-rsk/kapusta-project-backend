@@ -9,12 +9,22 @@ const ERROR_MESSAGES = {
   notFound: 'Not found',
   serverError: 'Server error',
   notAuthorized: 'Not authorized',
-  invalidEmailFormat: 'invalid email format',
-  missingField: 'missing required field',
-  invalidPasswordFormat: 'invalid password format'
+  invalidEmailFormat: 'Invalid email format',
+  missingField: 'Missing required field',
+  invalidPasswordFormat: 'Invalid password format',
+  badRequest: 'Bad request',
+  entryFeeMultipleSettingError: 'Entry fee can be setted only once',
+  insufficientFunds: 'Insufficient funds',
+  invalidValue: 'Invalid value'
+}
+
+const BALANCE_DATA_TYPES = {
+  income: 'income',
+  cost: 'cost'
 }
 
 module.exports = {
   ERROR_MESSAGES,
-  SUCCESS_MESSAGES
+  SUCCESS_MESSAGES,
+  BALANCE_DATA_TYPES
 }
