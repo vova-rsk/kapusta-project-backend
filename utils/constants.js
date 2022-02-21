@@ -14,7 +14,8 @@ const ERROR_MESSAGES = {
   invalidPasswordFormat: 'Invalid password format',
   badRequest: 'Bad request',
   entryFeeMultipleSettingError: 'Entry fee can be setted only once',
-  insufficientFunds: 'insufficient funds'
+  insufficientFunds: 'Insufficient funds',
+  invalidValue: 'Invalid value'
 }
 
 const BALANCE_DATA_TYPES = {
