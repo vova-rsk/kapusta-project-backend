@@ -10,7 +10,7 @@ const addTransactionDataSchema = Joi.object({
       'any.required': ERROR_MESSAGES.missingTypeField,
       'any.only': ERROR_MESSAGES.invalidTypeValue
     }),
-  period: Joi.date()
+  date: Joi.date()
     .required()
     .iso()
     .max('now')

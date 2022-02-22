@@ -5,7 +5,7 @@ const addTransaction = async (req, res) => {
 
   const newTransactionData = {
     type: req.body.type,
-    completedAt: new Date(req.body.period).toISOString(),
+    completedAt: req.body.date,
     description: req.body.description,
     category: req.body.category,
     amount: req.body.amount
