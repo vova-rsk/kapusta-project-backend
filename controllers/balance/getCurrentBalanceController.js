@@ -1,8 +1,10 @@
 const createError = require('http-errors')
 const { Balance } = require('../../models')
-const { constants: { ERROR_MESSAGES } } = require('../../utils')
+const { constants } = require('../../utils')
 
-const currentBalance = async (req, res) => {
+const { ERROR_MESSAGES } = constants
+
+const getCurrentBalance = async (req, res) => {
   const { _id: owner } = req.user
 
   const result = await Balance
@@ -23,4 +25,4 @@ const currentBalance = async (req, res) => {
   })
 }
 
-module.exports = currentBalance
+module.exports = getCurrentBalance

@@ -1,8 +1,9 @@
 const jwt = require('jsonwebtoken')
 const createError = require('http-errors')
 const { User } = require('../../models')
-const { constants: { ERROR_MESSAGES } } = require('../../utils')
+const { constants } = require('../../utils')
 
+const { ERROR_MESSAGES } = constants
 const SECRET_KEY = process.env.SECRET
 
 const loginUser = async (req, res) => {

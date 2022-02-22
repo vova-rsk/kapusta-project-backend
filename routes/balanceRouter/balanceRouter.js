@@ -1,12 +1,15 @@
 const express = require('express')
+const { setEntryFee, getCurrentBalance } = require('../../controllers')
+const { auth, validation } = require('../../middlewares')
+const { wrapper, validationSchemas, constants } = require('../../utils')
+
 const router = express.Router()
-const controllers = require('../../controllers')
-const middlewars = require('../../middlewares')
-const { wrapper, validationSchemas } = require('../../utils')
+const { REQ_VALIDATION_TARGET } = constants
+const entryFeeValidation = validation(validationSchemas.entryFeeDataSchema, REQ_VALIDATION_TARGET.BODY)
 
-router.use(wrapper(middlewars.auth))
+router.use(wrapper(auth))
 
-router.get('/', wrapper(controllers.currentBalance))
-router.post('/', wrapper(middlewars.validation(validationSchemas.entryFeeDataSchema)), wrapper(controllers.setEntryFee))
+router.get('/', wrapper(getCurrentBalance))
+router.post('/', wrapper(entryFeeValidation), wrapper(setEntryFee))
 
 module.exports = router

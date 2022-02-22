@@ -1,7 +1,7 @@
-const currentBalance = require('./currentBalanceController')
+const getCurrentBalance = require('./getCurrentBalanceController')
 const setEntryFee = require('./setEntryFeeController')
 
 module.exports = {
-  currentBalance,
+  getCurrentBalance,
   setEntryFee
 }

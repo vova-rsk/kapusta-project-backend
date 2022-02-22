@@ -1,5 +1,4 @@
 const currentUser = async (req, res) => {
-  console.log(req.user)
   const { email, name, avatarUrl } = req.user
 
   res.json({

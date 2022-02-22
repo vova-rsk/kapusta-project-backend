@@ -1,6 +1,8 @@
 const createError = require('http-errors')
 const { Balance } = require('../../models')
-const { constants: { ERROR_MESSAGES } } = require('../../utils')
+const { constants } = require('../../utils')
+
+const { ERROR_MESSAGES } = constants
 
 const setEntryFee = async (req, res) => {
   const { _id: owner } = req.user
