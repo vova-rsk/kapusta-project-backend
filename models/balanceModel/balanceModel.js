@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose')
 
+// balance schema
 const balanceSchema = new Schema({
   entryFee: {
     type: Number,
@@ -15,7 +16,9 @@ const balanceSchema = new Schema({
   },
   owner: {
     type: Schema.Types.ObjectId,
+    ref: 'user',
     required: [true, 'Owner is required']
+
   }
 }, { versionKey: false, timestamps: true })
 

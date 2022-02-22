@@ -1,6 +1,8 @@
 const createError = require('http-errors')
 const { User } = require('../../models')
-const { constants: { ERROR_MESSAGES } } = require('../../utils')
+const { constants } = require('../../utils')
+
+const { ERROR_MESSAGES } = constants
 
 const logoutUser = async (req, res) => {
   const { _id } = req.user
