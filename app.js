@@ -3,7 +3,13 @@ const logger = require('morgan')
 const cors = require('cors')
 const path = require('path')
 require('dotenv').config()
-const { userRouter, balanceRouter, categoriesRouter, transactionsRouter } = require('./routes')
+const {
+  userRouter,
+  balanceRouter,
+  categoriesRouter,
+  transactionsRouter,
+  reportsRouter
+} = require('./routes')
 const { constants: { ERROR_MESSAGES } } = require('./utils')
 
 const app = express()
@@ -21,6 +27,7 @@ app.use('/user', userRouter)
 app.use('/api/balance', balanceRouter)
 app.use('/api/categories', categoriesRouter)
 app.use('/api/transactions', transactionsRouter)
+app.use('/api/reports', reportsRouter)
 
 app.use((req, res) => {
   res.status(404).json({ message: ERROR_MESSAGES.notFound })
