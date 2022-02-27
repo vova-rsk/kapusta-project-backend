@@ -4,10 +4,10 @@ const getDaysInterval = date => {
   const basicMonth = basicDate.getMonth()
   const basicDay = basicDate.getDate()
 
-  const startPeriod = new Date(basicDate, basicMonth, basicDay - 1, 23, 59, 59)
-  const endPeriod = new Date(basicYear, basicMonth, basicDay + 1, 0, 0, 0)
+  const startInterval = new Date(basicYear, basicMonth, basicDay, 0, 0, 0)
+  const endInterval = new Date(basicYear, basicMonth, basicDay + 1, 0, 0, 0)
 
-  return [startPeriod, endPeriod].map(elem => elem.toISOString())
+  return [startInterval, endInterval].map(elem => elem.toISOString())
 }
 
 module.exports = getDaysInterval
