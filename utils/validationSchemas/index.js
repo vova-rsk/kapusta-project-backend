@@ -4,6 +4,8 @@ const categoryDataSchema = require('./addCategoryDataSchema')
 const getTransactionsQuerySchema = require('./getTransactionsDataSchema')
 const deleteTransactionParamsSchema = require('./deleteTransactionDataSchema')
 const addTransactionDataSchema = require('./addTransactionDataSchema')
+const detailedReportQuerySchema = require('./getDetailedReportQuerySchema')
+const summaryReportQuerySchema = require('./getSummaryReportQuerySchema')
 
 module.exports = {
   userDataSchema,
@@ -11,5 +13,7 @@ module.exports = {
   categoryDataSchema,
   getTransactionsQuerySchema,
   deleteTransactionParamsSchema,
-  addTransactionDataSchema
+  addTransactionDataSchema,
+  detailedReportQuerySchema,
+  summaryReportQuerySchema
 }

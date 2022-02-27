@@ -42,11 +42,11 @@ transactionSchema.pre('save', { document: true }, async function (next) {
 
   const currentBalance = getBalance(doc)
 
-  if (type.toLowerCase() === TRANSACTION_TYPES.credit && currentBalance < amount) {
+  if (type.toLowerCase() === TRANSACTION_TYPES.CREDIT && currentBalance < amount) {
     throw new Error('insufficient balance')
   }
 
-  type.toLowerCase() === TRANSACTION_TYPES.credit
+  type.toLowerCase() === TRANSACTION_TYPES.CREDIT
     ? doc.totalCost += amount
     : doc.totalIncome += amount
 
@@ -70,11 +70,11 @@ transactionSchema.pre('findOneAndRemove', { document: false, query: true }, asyn
 
   const currentBalance = getBalance(doc)
 
-  if (type.toLowerCase() === TRANSACTION_TYPES.debit && currentBalance < amount) {
+  if (type.toLowerCase() === TRANSACTION_TYPES.DEBIT && currentBalance < amount) {
     throw new Error('Execution error. Negative balance expected')
   }
 
-  type.toLowerCase() === TRANSACTION_TYPES.debit
+  type.toLowerCase() === TRANSACTION_TYPES.DEBIT
     ? doc.totalIncome -= amount
     : doc.totalCost -= amount
 

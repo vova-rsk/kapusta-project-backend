@@ -1,3 +1,4 @@
 const getDetailedInfo = require('./detailedReport')
+const getSummaryInfo = require('./summaryReport')
 
-module.exports = { getDetailedInfo }
+module.exports = { getDetailedInfo, getSummaryInfo }

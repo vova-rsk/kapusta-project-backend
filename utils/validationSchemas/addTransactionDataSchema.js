@@ -11,9 +11,9 @@ const addTransactionDataSchema = Joi.object({
       'any.only': ERROR_MESSAGES.invalidTypeValue
     }),
   date: Joi.date()
-    .required()
     .iso()
-    .max('now')
+    .required()
+    // .max(new Date().toISOString())
     .messages({
       'any.required': ERROR_MESSAGES.missingDateField,
       'date.format': ERROR_MESSAGES.invalidDateFormat,
@@ -22,7 +22,7 @@ const addTransactionDataSchema = Joi.object({
   description: Joi.string()
     .required()
     .trim()
-    .pattern(/^[a-zA-Zа-яА-Я][a-zA-Zа-яА-Я0-9_\s]{2,20}$/)
+    // .pattern(/^[a-zA-Zа-яА-Я_\s][a-zA-Zа-яА-Я0-9]{1,20}$/)
     .messages({
       'any.required': ERROR_MESSAGES.missingDescriptionField,
       'string.pattern.base': ERROR_MESSAGES.invalidDescriptionValue

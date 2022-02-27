@@ -20,6 +20,21 @@ const SUCCESS_MESSAGES = {
   serverStartedSuccess: 'Server running. Use our API on port'
 }
 
+const MONTHS = {
+  0: 'Январь',
+  1: 'Февраль',
+  2: 'Март',
+  3: 'Апрель',
+  4: 'Май',
+  5: 'Июнь',
+  6: 'Июль',
+  7: 'Август',
+  8: 'Сентябрь',
+  9: 'Октябрь',
+  10: 'Ноябрь',
+  11: 'Декабрь'
+}
+
 const ERROR_MESSAGES = {
   dbConnectionError: 'Cannot create connection to DB',
   invalidLoginData: 'Email or password is wrong',
@@ -50,8 +65,14 @@ const ERROR_MESSAGES = {
   invalidAmountValue: 'Invalid amount field value',
   missingDescriptionField: 'Missing required description field',
   invalidDescriptionValue: 'Invalid description field value',
-  missingCategoryField: 'missing required category field',
-  invalidCategoryValue: 'invalid category field value'
+  missingCategoryField: 'Missing required category field',
+  invalidCategoryValue: 'Invalid category field value',
+  missingYearQueryString: 'Missing required year query string',
+  invalidYearQueryStringFormat: 'Invalid year query string format',
+  outOfRangeYearQueryString: 'Year query string value is out of range (1900-9999)',
+  invalidMonthQueryStringFormat: 'Invalid month query string format',
+  missingMonthQueryString: 'Missing required month query string',
+  outOfRangeMonthQueryString: 'Month query string value is out of range (0-11)'
 }
 
 module.exports = {
@@ -59,5 +80,6 @@ module.exports = {
   SUCCESS_MESSAGES,
   CATEGORY_TYPES,
   TRANSACTION_TYPES,
-  REQ_VALIDATION_TARGET
+  REQ_VALIDATION_TARGET,
+  MONTHS
 }
