@@ -9,7 +9,7 @@ const auth = async (req, res, next) => {
   const { authorization } = req.headers
 
   if (!authorization) {
-    next(createError(401, ERROR_MESSAGES.notAuthorized))
+    throw createError(401, ERROR_MESSAGES.notAuthorized)
   }
 
   const token = authorization.split(' ')[1]
