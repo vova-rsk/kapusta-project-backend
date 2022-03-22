@@ -4,10 +4,8 @@ const currentUser = async (req, res) => {
   res.json({
     status: 'success',
     code: 200,
-    data: {
-      result: {
-        user: { email, name, avatarUrl }
-      }
+    result: {
+      user: { email, name, avatarUrl }
     }
   })
 }

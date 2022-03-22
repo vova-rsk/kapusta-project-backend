@@ -18,15 +18,13 @@ const addTransaction = async (req, res) => {
   res.status(201).json({
     status: 'success',
     code: 201,
-    data: {
-      result: {
-        _id,
-        type,
-        completedAt,
-        description,
-        category,
-        amount
-      }
+    result: {
+      _id,
+      type,
+      completedAt,
+      description,
+      category,
+      amount
     }
   })
 }

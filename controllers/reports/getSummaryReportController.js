@@ -1,5 +1,5 @@
-const { Transaction } = require('../../../models')
-const { getSummaryTimeInterval, makeSummary } = require('../../../utils')
+const { Transaction } = require('../../models')
+const { getSummaryTimeInterval, makeSummary } = require('../../utils')
 
 const getSummaryInfo = async (req, res) => {
   const { _id: owner } = req.user
@@ -23,9 +23,7 @@ const getSummaryInfo = async (req, res) => {
   res.status(200).json({
     status: 'success',
     code: 200,
-    data: {
-      result
-    }
+    result
   })
 }
 

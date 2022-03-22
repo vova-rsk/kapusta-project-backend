@@ -19,9 +19,7 @@ const getCurrentBalance = async (req, res) => {
   res.status(200).json({
     status: 'success',
     code: 200,
-    data: {
-      result: balance
-    }
+    result: balance
   })
 }
 

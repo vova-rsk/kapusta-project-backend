@@ -28,14 +28,12 @@ const loginUser = async (req, res) => {
   res.status(200).json({
     status: 'success',
     code: 200,
-    data: {
-      result: {
-        token,
-        user: {
-          email,
-          name,
-          avatarUrl
-        }
+    result: {
+      token,
+      user: {
+        email,
+        name,
+        avatarUrl
       }
     }
   })

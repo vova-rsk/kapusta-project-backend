@@ -1,5 +1,5 @@
-const { getDetailedReport } = require('../../../services')
-const { getMonthOfYearInterval, createUrl } = require('../../../utils')
+const { getDetailedReport } = require('../../services')
+const { getMonthOfYearInterval, createUrl } = require('../../utils')
 
 const getDetailedInfo = async (req, res) => {
   const { _id: owner } = req.user
@@ -31,9 +31,7 @@ const getDetailedInfo = async (req, res) => {
   res.status(200).json({
     status: 'success',
     code: 200,
-    data: {
-      result
-    }
+    result
   })
 }
 
