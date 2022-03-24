@@ -6,22 +6,25 @@ const { constants } = require('../../utils')
 const { ERROR_MESSAGES } = constants
 
 const googleAuth = async (req, res) => {
-  const { token } = req.body
+  const { token: idToken } = req.body
 
-  if (!token) throw createError(401, ERROR_MESSAGES.missingTokenField)
+  if (!idToken) throw createError(401, ERROR_MESSAGES.missingTokenField)
 
   const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID)
 
   const ticket = await client.verifyIdToken({
-    idToken: token,
+    idToken,
     audience: process.env.GOOGLE_CLIENT_ID
   })
 
   const { name, email, picture } = ticket.getPayload()
 
+  console.log(idToken)
   const user = await User
-    .findOneAndUpdate({ email }, { email, name, avatarUrl: picture, token }, { upsert: true })
+    .findOneAndUpdate({ email }, { email, name, avatarUrl: picture, token: idToken }, { upsert: true, new: true })
     .select({ email: 1, name: 1, avatarUrl: 1, token: 1 })
+
+  console.log(user.token)
 
   res.status(200).json({
     status: 'success',
