@@ -15,9 +15,9 @@ const REQ_VALIDATION_TARGET = {
   PARAMS: 'params'
 }
 
-const SUCCESS_MESSAGES = {
-  dbConnectionSuccess: 'Database connection successful',
-  serverStartedSuccess: 'Server running. Use our API on port'
+const AUTHORIZATION_TYPE = {
+  BY_GOOGLE: 'byGoogle',
+  BY_EMAIL: 'byEmail'
 }
 
 const MONTHS = {
@@ -33,6 +33,11 @@ const MONTHS = {
   9: 'Октябрь',
   10: 'Ноябрь',
   11: 'Декабрь'
+}
+
+const SUCCESS_MESSAGES = {
+  dbConnectionSuccess: 'Database connection successful',
+  serverStartedSuccess: 'Server running. Use our API on port'
 }
 
 const ERROR_MESSAGES = {
@@ -82,5 +87,6 @@ module.exports = {
   CATEGORY_TYPES,
   TRANSACTION_TYPES,
   REQ_VALIDATION_TARGET,
-  MONTHS
+  MONTHS,
+  AUTHORIZATION_TYPE
 }
