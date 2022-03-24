@@ -19,12 +19,9 @@ const googleAuth = async (req, res) => {
 
   const { name, email, picture } = ticket.getPayload()
 
-  console.log(idToken)
   const user = await User
     .findOneAndUpdate({ email }, { email, name, avatarUrl: picture, token: idToken }, { upsert: true, new: true })
     .select({ email: 1, name: 1, avatarUrl: 1, token: 1 })
-
-  console.log(user.token)
 
   res.status(200).json({
     status: 'success',
