@@ -1,5 +1,5 @@
 const express = require('express')
-const { signupUser, loginUser, logoutUser, currentUser } = require('../../controllers')
+const { signupUser, loginUser, logoutUser, currentUser, googleAuth } = require('../../controllers')
 const { auth, validation } = require('../../middlewares')
 const { wrapper, validationSchemas, constants } = require('../../utils')
 
@@ -9,6 +9,7 @@ const signupUserDataValidation = validation(validationSchemas.userDataSchema, RE
 
 router.post('/signup', wrapper(signupUserDataValidation), wrapper(signupUser))
 router.post('/login', wrapper(loginUser))
+router.post('/google-auth', wrapper(googleAuth))
 
 router.use(wrapper(auth))
 

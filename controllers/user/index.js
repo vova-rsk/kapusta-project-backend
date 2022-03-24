@@ -4,6 +4,7 @@ const currentUser = require('./currentUserController')
 const logoutUser = require('./logoutUserController')
 const updateUserAvatar = require('./updateUserAvatarController')
 const updateUserName = require('./updateUserNameController')
+const googleAuth = require('./googleAuthController')
 
 module.exports = {
   signupUser,
@@ -11,5 +12,6 @@ module.exports = {
   currentUser,
   logoutUser,
   updateUserAvatar,
-  updateUserName
+  updateUserName,
+  googleAuth
 }
