@@ -72,7 +72,8 @@ const ERROR_MESSAGES = {
   outOfRangeYearQueryString: 'Year query string value is out of range (1900-9999)',
   invalidMonthQueryStringFormat: 'Invalid month query string format',
   missingMonthQueryString: 'Missing required month query string',
-  outOfRangeMonthQueryString: 'Month query string value is out of range (0-11)'
+  outOfRangeMonthQueryString: 'Month query string value is out of range (0-11)',
+  missingTokenField: 'Missing required token field'
 }
 
 module.exports = {
