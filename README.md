@@ -1,6 +1,6 @@
 # kapusta-project-backend
 
-# API:
+## API:
 
 #### POST https://finance-kapusta.herokuapp.com/user/signup
 
@@ -31,7 +31,9 @@ request body:
 }
 </pre>
 
-### !! next API needs bearer user-token and authorizationtype:<one of ['byEmail', 'byGoogle']> in headers
+#### <span slyle="color:red"> next API needs bearer user-token and authorizationtype in request headers </span>
+
+<pre>authorizationtype - one of ['byEmail', 'byGoogle']</pre>
 
 #### POST https://finance-kapusta.herokuapp.com/user/logout
 
