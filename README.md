@@ -4,29 +4,32 @@
 
 #### POST https://finance-kapusta.herokuapp.com/user/signup
 
+<pre>
 request body:
-
-<!--
-email: <string>,
-password: <string>
--->
+{
+    email - string,
+    password - string
+}
+</pre>
 
 #### POST https://finance-kapusta.herokuapp.com/user/login
 
+<pre>
 request body:
-
-<!--
-email: <string>,
-password: <string>
--->
+{
+    email - string,
+    password - string
+}
+</pre>
 
 #### POST https://finance-kapusta.herokuapp.com/user/google-auth
 
+<pre>
 request body:
-
-<!--
-token: <google tokenId>
--->
+{
+    token - google tokenId
+}
+</pre>
 
 ### !! next API needs bearer user-token and authorizationtype:<one of ['byEmail', 'byGoogle']> in headers
 
@@ -38,24 +41,26 @@ token: <google tokenId>
 
 #### GET https://finance-kapusta.herokuapp.com/api/transactions
 
+<pre>
 query string:
-
-<!--
-type: <one of ['debit', 'credit', 'all']>,
-period: <ISO8601 format>
- -->
+{
+    type - one of ['debit', 'credit', 'all'],
+    period - date in ISO8601 format
+}
+</pre>
 
 #### POST https://finance-kapusta.herokuapp.com/api/transactions
 
+<pre>
 request body:
-
-<!--
-type: <one of ['debit', 'credit', 'all']>,
-date: <in ISO8601 format>,
-description: <string>,
-category: <categoryId>,
-amount: <number>
--->
+{
+    type - one of ['debit', 'credit', 'all'],
+    date - date in ISO8601 format,
+    description - string,
+    category - categoryId,
+    amount - number
+}
+</pre>
 
 #### DELETE https://finance-kapusta.herokuapp.com/api/transactions/:id
 
@@ -63,23 +68,29 @@ amount: <number>
 
 #### POST https://finance-kapusta.herokuapp.com/api/balance
 
+<pre>
 request body:
-
-{value: <number>}
+{
+    value - number
+}
+</pre>
 
 #### GET https://finance-kapusta.herokuapp.com/api/reports/detailed
 
+<pre>
 query string:
-
-month: <number from 0 to 11>, year: <YYYY format>
+{
+    month - number from 0 to 11, 
+    year - number in YYYY format
+}
+</pre>
 
 #### GET https://finance-kapusta.herokuapp.com/api/reports/summary
 
-query string:
-
 <pre>
+query string:
 { 
-    type: <one of ['debit', credit]>, 
-    period: <ISO8601 format> 
+    type - one of ['debit', credit], 
+    period - date in ISO8601 format 
 }
 </pre>
