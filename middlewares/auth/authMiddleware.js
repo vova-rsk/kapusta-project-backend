@@ -4,7 +4,7 @@ const createError = require('http-errors')
 const { User } = require('../../models')
 const { constants } = require('../../utils')
 
-const ERROR_MESSAGES = constants
+const { ERROR_MESSAGES, AUTHORIZATION_TYPE } = constants
 const SECRET_KEY = process.env.SECRET
 
 const auth = async (req, res, next) => {
@@ -17,7 +17,7 @@ const auth = async (req, res, next) => {
   const token = authorization.split(' ')[1]
   let requestParams = null
 
-  if (authorizationtype === ERROR_MESSAGES.AUTHORIZATION_TYPE.BY_EMAIL) {
+  if (authorizationtype === AUTHORIZATION_TYPE.BY_EMAIL) {
     const result = jwt.verify(token, SECRET_KEY)
 
     requestParams = { _id: result.id }
