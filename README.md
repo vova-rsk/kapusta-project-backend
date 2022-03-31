@@ -1,8 +1,16 @@
 # kapusta-project-backend
 
-pet-project - back-end part of the application for keeping records of the user's
+Pet-project - back-end part of the application for keeping records of the user's
 expenses and income with the possibility of obtaining general and detailed
 reports for a certain period.
+
+Technologies used:
+1) Node.js
+2) Express
+3) MongoDB Atlas
+4) Mongoose
+5) bcryptjs, 
+6) OAuth2
 
 ## API:
 
