@@ -1,19 +1,19 @@
 {
-  "name": "team-project-server",
+  "name": "kapusta-project-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chillhaze/team-project-server.git"
+    "url": "git+https://github.com/vova-rsk/kapusta-project-backend"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/chillhaze/team-project-server/issues"
+    "url": "https://github.com/vova-rsk/kapusta-project-backend"
   },
-  "homepage": "https://github.com/chillhaze/team-project-server#readme",
+  "homepage": "https://github.com/vova-rsk/kapusta-project-backend#readme",
   "scripts": {
     "start": "cross-env NODE_ENV=production node ./bin/server.js",
     "start:dev": "cross-env NODE_ENV=development nodemon ./bin/server.js",
