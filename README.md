@@ -38,6 +38,13 @@ token: <google tokenId>
 
 # GET https://finance-kapusta.herokuapp.com/api/transactions
 
+query string:
+
+<!--
+type: <one of ['debit', 'credit', 'all']>,
+period: <ISO8601 format>
+ -->
+
 # POST https://finance-kapusta.herokuapp.com/api/transactions
 
 request body:
@@ -64,4 +71,16 @@ value: <number>,
 
 # GET https://finance-kapusta.herokuapp.com/api/reports/detailed
 
+query string:
+
+<!--
+month: <number from 0 to 11>,
+year: <YYYY format>
+ -->
+
 # GET https://finance-kapusta.herokuapp.com/api/reports/summary
+
+<!--
+type: <one of ['debit', credit]>,
+period: <ISO8601 format>,
+ -->
