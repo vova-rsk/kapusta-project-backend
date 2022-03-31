@@ -65,9 +65,7 @@ amount: <number>
 
 request body:
 
-<!--
-value: <number>,
--->
+{value: <number>}
 
 #### GET https://finance-kapusta.herokuapp.com/api/reports/detailed
 
@@ -77,7 +75,11 @@ month: <number from 0 to 11>, year: <YYYY format>
 
 #### GET https://finance-kapusta.herokuapp.com/api/reports/summary
 
-<!--
-type: <one of ['debit', credit]>,
-period: <ISO8601 format>,
- -->
+query string:
+
+<pre>
+{ 
+    type: <one of ['debit', credit]>, 
+    period: <ISO8601 format> 
+}
+</pre>
