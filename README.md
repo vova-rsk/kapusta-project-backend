@@ -1,5 +1,9 @@
 # kapusta-project-backend
 
+pet-project - back-end part of the application for keeping records of the user's
+expenses and income with the possibility of obtaining general and detailed
+reports for a certain period.
+
 ## API:
 
 #### POST https://finance-kapusta.herokuapp.com/user/signup
@@ -31,7 +35,7 @@ request body:
 }
 </pre>
 
-#### <span slyle="color:red"> next API needs bearer user-token and authorizationtype in request headers </span>
+### !! next API needs bearer user-token and authorizationtype in request headers
 
 <pre>authorizationtype - one of ['byEmail', 'byGoogle']</pre>
 
